@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reset Password</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;800&family=Figtree:wght@400;600;700&family=Orbitron:wght@600;800&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body data-page="Reset Password">
+<div class="auth">
+  <aside class="brand">
+    <a class="logo" href="index.html" data-t="title">Royal Roulette</a>
+    <h2>Main roulette live bersama pemain lain.</h2>
+    <p data-t="sub"></p>
+    <ul class="perks">
+      <li><b>🎁</b><span><strong id="pk1">Chip awal gratis</strong><br><small style="opacity:.75">Langsung bermain setelah akun dibuat.</small></span></li>
+      <li><b>🎡</b><span><strong>Putaran serempak</strong><br><small style="opacity:.75">Semua pemain melihat roda dan hasil yang sama.</small></span></li>
+      <li><b>💬</b><span><strong>Chat langsung dengan admin</strong><br><small style="opacity:.75">Bantuan cepat langsung dari dalam permainan.</small></span></li>
+    </ul>
+    <a class="alt" href="panduan.html">Baca panduan penggunaan</a>
+  </aside>
+  <main class="panel"><div class="box">
+    <form id="f" novalidate>
+      <div class="tabs" role="tablist"><button type="button" role="tab" id="tIn">Masuk</button><button type="button" role="tab" id="tUp">Daftar</button></div>
+      <h1 id="hd"></h1><p class="lead" id="ld"></p>
+      <div class="fld" data-v="up"><label for="fn" id="lfn">Nama lengkap</label><input id="fn" autocomplete="name" maxlength="40"></div>
+      <div class="fld" data-v="in up"><label for="fu" id="lu">Username</label><input id="fu" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="40"></div>
+      <div class="fld" data-v="up fg"><label for="fem" id="lem">Email</label><input id="fem" type="email" autocomplete="email"></div>
+      <div class="fld" data-v="up fg"><label for="fph" id="lph">Nomor telepon</label><input id="fph" type="tel" autocomplete="tel"></div>
+      <div class="fld" data-v="" id="wic"><label for="fic">Kode undangan</label><input id="fic" autocomplete="off"></div>
+      <div class="fld" data-v="in up fg"><label for="fpw" id="lp">Password</label><div class="pw"><input id="fpw" type="password"><button type="button" class="eye" data-for="fpw" aria-label="Tampilkan password">👁</button></div><div class="meter" data-v="up fg"><i id="mb"></i></div><small id="mt" data-v="up fg"></small></div>
+      <div class="fld" data-v="up fg"><label for="fpw2">Ulangi password</label><div class="pw"><input id="fpw2" type="password" autocomplete="new-password"><button type="button" class="eye" data-for="fpw2" aria-label="Tampilkan password">👁</button></div></div>
+      <div class="row2" data-v="in"><label class="chk" style="margin:0"><input type="checkbox" id="rm" checked> Ingat saya</label><a href="lupa.html">Lupa password?</a></div>
+      <label class="chk" data-v="up"><input type="checkbox" id="tm"><span id="tt"></span></label>
+      <div id="msg" role="alert" aria-live="polite"></div>
+      <button class="btn gold big" id="go" type="submit">Masuk</button>
+      <p class="sw" id="sw"></p>
+    </form>
+  </div></main>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script>window.AUTH_VIEW='fg'</script>
+<script src="auth.js"></script>
+</body>
+</html>

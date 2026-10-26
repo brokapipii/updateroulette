@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "docs":   { ".read": true, ".write": true },
+    "leases": { ".read": true, ".write": true },
+    "$other": { ".read": false, ".write": false }
+  }
+}
